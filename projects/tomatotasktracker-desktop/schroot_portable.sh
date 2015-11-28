@@ -14,35 +14,35 @@ git checkout ${GIT_BRANCH}
 export APP_VERSION=\`git describe --tags\`
 export APP_REVISION=\`git rev-parse HEAD\`
 
-# copy debian build rules
-cp -R "${CURRENT_DIR}/dist/debian" "${BUILD_DIR}/sources"
-
 # -----------------------------------------------------------------------
 # execute distributive specific code inside the schroot
 # -----------------------------------------------------------------------
-schroot -c ${BUILD_TARGET} -u buildbot -- bash << EOL_INTERNAL
+schroot -c `echo ${BUILD_TARGET} | cut -d \- -f 1` -u buildbot -- bash << EOL_INTERNAL
 #!/bin/bash
 set -e
 # speed up the compilation: COMPILE_THREAD=CPU_COUNT+1
 export MAKEFLAGS="-j $((`nproc`+1))"
-export APP_VERSION="\${APP_VERSION}"
-export APP_REVISION="\${APP_REVISION}"
-export BUILD_TARGET=${BUILD_TARGET}
-export QMAKE_ARGS="DEFINES += APP_BUILD_NUMBER='${APP_BUILD_NUMBER}' \
+export QMAKE_ARGS="DEFINES += APP_PORTABLE                           \
+                              APP_BUILD_NUMBER='${APP_BUILD_NUMBER}' \
                               APP_BUILD_DATE='${APP_BUILD_DATE}'     \
                               APP_SOURCES='${GIT_SOURCES}'           \
                               APP_VERSION='\${APP_VERSION}'          \
                               APP_REVISION='\${APP_REVISION}'"
 cd "${BUILD_DIR}/sources"
-fakeroot ./debian/rules binary
+lrelease tomatotasktracker-desktop.pro
+qmake "\\\${QMAKE_ARGS}"
+make -f Makefile.Release
+make INSTALL_ROOT="${BUILD_DIR}/sources/portable-build" install
 exit 0;
 EOL_INTERNAL
 # -----------------------------------------------------------------------
 # -----------------------------------------------------------------------
 # -----------------------------------------------------------------------
 
-# copy the .deb packages to the packages directory
-cp ${BUILD_DIR}/sources/*.deb ${PACKAGE_DIR}/
+# create && copy the .tar.gz packages to the packages directory
+cd "${BUILD_DIR}/sources/portable-build"
+tar -cvzf "../tomatotasktracker-desktop_\${APP_VERSION}_${BUILD_TARGET}.tar.gz" .
+cp "${BUILD_DIR}/sources/tomatotasktracker-desktop_\${APP_VERSION}_${BUILD_TARGET}.tar.gz" ${PACKAGE_DIR}/
 
 exit 0;
 EOL
