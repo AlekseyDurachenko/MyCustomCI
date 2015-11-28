@@ -1,0 +1,7 @@
+debian_wheezy_amd64
+debian_jessie_i386
+debian_jessie_amd64
+ubuntu_trusty_i386
+ubuntu_trusty_amd64
+ubuntu_wily_i386
+ubuntu_wily_amd64
