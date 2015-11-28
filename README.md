@@ -31,13 +31,13 @@ GIT_BRANCH=0.1.1 ./build.sh
 * Packages (deb): libqt4-dev libphonon-dev fakeroot debhelper
 
 #### Success
-* debian_wheezy_amd64
-* debian_jessie_i386
-* debian_jessie_amd64
-* ubuntu_trusty_i386
-* ubuntu_trusty_amd64
-* ubuntu_wily_i386
-* ubuntu_wily_amd64
+* debian_wheezy_amd64 (+ portable)
+* debian_jessie_i386 (+ portable)
+* debian_jessie_amd64 (+ portable)
+* ubuntu_trusty_i386 (+ portable)
+* ubuntu_trusty_amd64 (+ portable)
+* ubuntu_wily_i386 (+ portable)
+* ubuntu_wily_amd64 (+ portable)
 
 #### Failed
 * ubuntu_precise_i386 - cc1plus: error: unrecognized command line option '-std=c++11'
