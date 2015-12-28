@@ -16,7 +16,7 @@ shcroot-configure.sh
 # Execute build script
 ```bash
 # for build the custom version(tag/branch)
-GIT_BRANCH=0.1.1 ./build.sh
+GIT_BRANCH=v0.1.1 ./build.sh
 # or build from master branch
 ./build.sh
 ```
