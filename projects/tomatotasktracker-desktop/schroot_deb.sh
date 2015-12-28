@@ -11,7 +11,7 @@ git clone ${GIT_SOURCES} "${BUILD_DIR}/sources"
 cd "${BUILD_DIR}/sources"
 git checkout ${GIT_BRANCH}
 # extreact version and revision
-export APP_VERSION=\`git describe --tags\`
+export APP_VERSION=\`git describe --tags | cut -c 2-\`
 export APP_REVISION=\`git rev-parse HEAD\`
 
 # copy debian build rules
