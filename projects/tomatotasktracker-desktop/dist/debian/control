@@ -10,4 +10,4 @@ Vcs-Svn: https://github.com/AlekseyDurachenko/tomatotasktracker-desktop
 Package: tomatotasktracker-desktop
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Tomato Task tracker is your personal simple task tracker with added Pomodoro technique
+Description: tomato task tracker is your personal simple task tracker with added Pomodoro technique
