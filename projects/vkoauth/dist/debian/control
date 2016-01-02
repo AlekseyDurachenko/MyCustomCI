@@ -1,0 +1,13 @@
+Source: vkoauth
+Section: misc
+Priority: optional
+Maintainer: Durachenko Aleksey V. <durachenko.aleksey@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Homepage: http://alekseydurachenko.github.io/vkoauth/
+Vcs-Svn: https://github.com/AlekseyDurachenko/vkoauth
+
+Package: vkoauth
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: vkontakte application authorization utility
