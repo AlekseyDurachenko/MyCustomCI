@@ -10,4 +10,5 @@ Vcs-Svn: https://github.com/AlekseyDurachenko/vkoauth
 Package: vkoauth
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: vkontakte application authorization utility
+Description: VK OAuth
+ Vkontakte application authorization utility
