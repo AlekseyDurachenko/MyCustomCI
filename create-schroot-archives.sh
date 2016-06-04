@@ -4,9 +4,6 @@ cd /home/chroots/ubuntu_precise_amd64 && tar -cvzf ../ubuntu_precise_amd64.boots
 # ubuntu 14.04
 cd /home/chroots/ubuntu_trusty_i386 && tar -cvzf ../ubuntu_trusty_i386.bootstrap.tgz .
 cd /home/chroots/ubuntu_trusty_amd64 && tar -cvzf ../ubuntu_trusty_amd64.bootstrap.tgz .
-# ubuntu 15.10
-cd /home/chroots/ubuntu_wily_i386 && tar -cvzf ../ubuntu_wily_i386.bootstrap.tgz .
-cd /home/chroots/ubuntu_wily_amd64 && tar -cvzf ../ubuntu_wily_amd64.bootstrap.tgz .
 # ubuntu 16.04
 cd /home/chroots/ubuntu_xenial_i386 && tar -cvzf ../ubuntu_xenial_i386.bootstrap.tgz .
 cd /home/chroots/ubuntu_xenial_amd64 && tar -cvzf ../ubuntu_xenial_amd64.bootstrap.tgz .

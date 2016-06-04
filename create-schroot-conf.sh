@@ -36,26 +36,6 @@ type=directory
 users=buildbot
 EOL
 
-cat >/etc/schroot/chroot.d/ubuntu_wily_i386.conf <<EOL
-[ubuntu_wily_i386]
-description=Ubuntu 15.10 Wily for i386
-directory=/home/chroots/ubuntu_wily_i386
-personality=linux32
-root-users=buildbot
-type=directory
-users=buildbot
-EOL
-
-cat >/etc/schroot/chroot.d/ubuntu_wily_amd64.conf <<EOL
-[ubuntu_wily_amd64]
-description=Ubuntu 15.10 Wily for amd64
-directory=/home/chroots/ubuntu_wily_amd64
-root-users=buildbot
-type=directory
-users=buildbot
-EOL
-
-
 cat >/etc/schroot/chroot.d/ubuntu_xenial_i386.conf <<EOL
 [ubuntu_xenial_i386]
 description=Ubuntu 16.04 Xenial for i386

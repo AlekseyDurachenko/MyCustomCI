@@ -8,11 +8,6 @@ schroot -c ubuntu_trusty_i386 -u root -- apt-get dist-upgrade -y
 schroot -c ubuntu_trusty_amd64 -u root -- apt-get update
 schroot -c ubuntu_trusty_amd64 -u root -- apt-get dist-upgrade -y
 
-schroot -c ubuntu_wily_i386 -u root -- apt-get update
-schroot -c ubuntu_wily_i386 -u root -- apt-get dist-upgrade -y
-schroot -c ubuntu_wily_amd64 -u root -- apt-get update
-schroot -c ubuntu_wily_amd64 -u root -- apt-get dist-upgrade -y
-
 schroot -c ubuntu_xenial_i386 -u root -- apt-get update
 schroot -c ubuntu_xenial_i386 -u root -- apt-get dist-upgrade -y
 schroot -c ubuntu_xenial_amd64 -u root -- apt-get update

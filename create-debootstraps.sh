@@ -4,9 +4,6 @@ debootstrap --variant=buildd --arch=amd64 precise /home/chroots/ubuntu_precise_a
 # ubuntu 14.04
 debootstrap --variant=buildd --arch=i386 trusty /home/chroots/ubuntu_trusty_i386 http://archive.ubuntu.com/ubuntu/
 debootstrap --variant=buildd --arch=amd64 trusty /home/chroots/ubuntu_trusty_amd64 http://archive.ubuntu.com/ubuntu/
-# ubuntu 15.10
-debootstrap --variant=buildd --arch=i386 wily /home/chroots/ubuntu_wily_i386 http://archive.ubuntu.com/ubuntu/
-debootstrap --variant=buildd --arch=amd64 wily /home/chroots/ubuntu_wily_amd64 http://archive.ubuntu.com/ubuntu/
 # ubuntu 16.04
 debootstrap --variant=buildd --arch=i386 xenial /home/chroots/ubuntu_xenial_i386 http://archive.ubuntu.com/ubuntu/
 echo 'deb http://archive.ubuntu.com/ubuntu xenial universe' >>/home/chroots/ubuntu_xenial_i386/etc/apt/sources.list
