@@ -56,6 +56,26 @@ users=buildbot
 EOL
 
 
+cat >/etc/schroot/chroot.d/ubuntu_xenial_i386.conf <<EOL
+[ubuntu_xenial_i386]
+description=Ubuntu 16.04 Xenial for i386
+directory=/home/chroots/ubuntu_xenial_i386
+personality=linux32
+root-users=buildbot
+type=directory
+users=buildbot
+EOL
+
+cat >/etc/schroot/chroot.d/ubuntu_xenial_amd64.conf <<EOL
+[ubuntu_xenial_amd64]
+description=Ubuntu 16.04 Xenial for amd64
+directory=/home/chroots/ubuntu_xenial_amd64
+root-users=buildbot
+type=directory
+users=buildbot
+EOL
+
+
 cat >/etc/schroot/chroot.d/debian_squeeze_i386.conf <<EOL
 [debian_squeeze_i386]
 description=Debian 6 Squeeze for i386

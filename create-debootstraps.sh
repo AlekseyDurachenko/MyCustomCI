@@ -7,6 +7,11 @@ debootstrap --variant=buildd --arch=amd64 trusty /home/chroots/ubuntu_trusty_amd
 # ubuntu 15.10
 debootstrap --variant=buildd --arch=i386 wily /home/chroots/ubuntu_wily_i386 http://archive.ubuntu.com/ubuntu/
 debootstrap --variant=buildd --arch=amd64 wily /home/chroots/ubuntu_wily_amd64 http://archive.ubuntu.com/ubuntu/
+# ubuntu 16.04
+debootstrap --variant=buildd --arch=i386 xenial /home/chroots/ubuntu_xenial_i386 http://archive.ubuntu.com/ubuntu/
+echo 'deb http://archive.ubuntu.com/ubuntu xenial universe' >>/home/chroots/ubuntu_xenial_i386/etc/apt/sources.list
+debootstrap --variant=buildd --arch=amd64 xenial /home/chroots/ubuntu_xenial_amd64 http://archive.ubuntu.com/ubuntu/
+echo 'deb http://archive.ubuntu.com/ubuntu xenial universe' >>/home/chroots/ubuntu_xenial_amd64/etc/apt/sources.list
 # debian 6
 debootstrap --variant=buildd --arch=i386 squeeze /home/chroots/debian_squeeze_i386 http://archive.debian.net/debian/
 echo 'deb http://archive.debian.org/debian squeeze-lts main' >>/home/chroots/debian_squeeze_i386/etc/apt/sources.list
