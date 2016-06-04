@@ -9,7 +9,11 @@ debootstrap --variant=buildd --arch=i386 wily /home/chroots/ubuntu_wily_i386 htt
 debootstrap --variant=buildd --arch=amd64 wily /home/chroots/ubuntu_wily_amd64 http://archive.ubuntu.com/ubuntu/
 # debian 6
 debootstrap --variant=buildd --arch=i386 squeeze /home/chroots/debian_squeeze_i386 http://archive.debian.net/debian/
+echo 'deb http://archive.debian.org/debian squeeze-lts main' >>/home/chroots/debian_squeeze_i386/etc/apt/sources.list
+echo 'Acquire::Check-Valid-Until "false";' >/home/chroots/debian_squeeze_i386/etc/apt/apt.conf.d/90ignore-release-date
 debootstrap --variant=buildd --arch=amd64 squeeze /home/chroots/debian_squeeze_amd64 http://archive.debian.net/debian/
+echo 'deb http://archive.debian.org/debian squeeze-lts main' >>/home/chroots/debian_squeeze_amd64/etc/apt/sources.list
+echo 'Acquire::Check-Valid-Until "false";' >/home/chroots/debian_squeeze_amd64/etc/apt/apt.conf.d/90ignore-release-date
 # debian 7
 debootstrap --variant=buildd --arch=i386 wheezy /home/chroots/debian_wheezy_i386 http://http.debian.net/debian/
 debootstrap --variant=buildd --arch=amd64 wheezy /home/chroots/debian_wheezy_amd64 http://http.debian.net/debian/
