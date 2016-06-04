@@ -13,6 +13,12 @@ create-schroot-conf.sh
 shcroot-configure.sh
 ```
 
+## Upgrade
+```bash
+host-upgrade.sh
+schroot-upgrade.sh
+'''
+
 # Execute build script
 ```bash
 # for build the custom version(tag/branch)
