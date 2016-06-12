@@ -29,7 +29,7 @@ export QMAKE_ARGS="DEFINES += APP_PORTABLE                           \
                               APP_VERSION='\${APP_VERSION}'          \
                               APP_REVISION='\${APP_REVISION}'"
 cd "${BUILD_DIR}/sources"
-lrelease tomatotasktracker-desktop.pro
+lrelease vkoauth.pro
 qmake "\\\${QMAKE_ARGS}"
 make -f Makefile.Release
 make INSTALL_ROOT="${BUILD_DIR}/sources/portable-build" install
@@ -41,8 +41,8 @@ EOL_INTERNAL
 
 # create && copy the .tar.gz packages to the packages directory
 cd "${BUILD_DIR}/sources/portable-build"
-tar -cvzf "../tomatotasktracker-desktop_\${APP_VERSION}_${BUILD_TARGET}.tar.gz" .
-cp "${BUILD_DIR}/sources/tomatotasktracker-desktop_\${APP_VERSION}_${BUILD_TARGET}.tar.gz" ${PACKAGE_DIR}/
+tar -cvzf "../vkoauth_\${APP_VERSION}_${BUILD_TARGET}.tar.gz" .
+cp "${BUILD_DIR}/sources/vkoauth_\${APP_VERSION}_${BUILD_TARGET}.tar.gz" ${PACKAGE_DIR}/
 
 exit 0;
 EOL
