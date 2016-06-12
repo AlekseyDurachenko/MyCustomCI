@@ -7,6 +7,7 @@ My custom continuous integration system
 ```bash
 host-upgrade.sh
 host-install-dependency.sh
+host-mxe-configure.sh
 create-debootstrap.sh
 create-schroot-archives.sh
 create-schroot-conf.sh
