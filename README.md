@@ -18,7 +18,7 @@ shcroot-configure.sh
 ```bash
 host-upgrade.sh
 schroot-upgrade.sh
-'''
+```
 
 # Execute build script
 ```bash
