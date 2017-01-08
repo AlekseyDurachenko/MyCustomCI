@@ -1,0 +1,15 @@
+local_mxe_win32
+debian_wheezy_amd64-portable
+debian_jessie_i386-portable
+debian_jessie_amd64-portable
+ubuntu_trusty_i386-portable
+ubuntu_trusty_amd64-portable
+ubuntu_xenial_i386-portable
+ubuntu_xenial_amd64-portable
+debian_wheezy_amd64
+debian_jessie_i386
+debian_jessie_amd64
+ubuntu_trusty_i386
+ubuntu_trusty_amd64
+ubuntu_xenial_i386
+ubuntu_xenial_amd64

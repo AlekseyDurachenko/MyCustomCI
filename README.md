@@ -29,6 +29,32 @@ GIT_BRANCH=v0.1.1 ./build.sh
 ```
 
 ## Projects
+### seismicsound-dl
+#### Information
+* Homepage: http://alekseydurachenko.github.io/seismicsound-dl/
+* Sources: https://github.com/AlekseyDurachenko/seismicsound-dl
+
+#### Dependencies
+* Packages (deb): libqt4-dev libphonon-dev libsndfile-1 fakeroot debhelper
+
+#### Success
+* debian_wheezy_amd64 (+ portable)
+* debian_jessie_i386 (+ portable)
+* debian_jessie_amd64 (+ portable)
+* ubuntu_trusty_i386 (+ portable)
+* ubuntu_trusty_amd64 (+ portable)
+* ubuntu_wily_i386 (+ portable)
+* ubuntu_wily_amd64 (+ portable)
+
+#### Failed
+* local_mxe_win32 - (problem with libsndfile, need to be fixed)
+* ubuntu_precise_i386 - cc1plus: error: unrecognized command line option '-std=c++11'
+* ubuntu_precise_amd64 - cc1plus: error: unrecognized command line option '-std=c++11'
+* debian_squeeze_i386 - cc1plus: error: unrecognized command line option "-std=c++11"
+* debian_squeeze_amd64 - cc1plus: error: unrecognized command line option "-std=c++11"
+* debian_wheezy_i386 - cc1plus: error: unrecognized command line option "-std=c++11"
+
+
 ### tomatotasktracker-desktop
 #### Information
 * Homepage: http://alekseydurachenko.github.io/tomatotasktracker-desktop/
@@ -38,6 +64,7 @@ GIT_BRANCH=v0.1.1 ./build.sh
 * Packages (deb): libqt4-dev libphonon-dev fakeroot debhelper
 
 #### Success
+* local_mxe_win32
 * debian_wheezy_amd64 (+ portable)
 * debian_jessie_i386 (+ portable)
 * debian_jessie_amd64 (+ portable)

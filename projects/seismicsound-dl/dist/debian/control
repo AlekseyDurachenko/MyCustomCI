@@ -1,0 +1,14 @@
+Source: seismicsound-dl
+Section: misc
+Priority: optional
+Maintainer: Durachenko Aleksey V. <durachenko.aleksey@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Homepage: http://alekseydurachenko.github.io/seismicsound-dl/
+Vcs-Svn: https://github.com/AlekseyDurachenko/seismicsound-dl
+
+Package: seismicsound-dl
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Seismic Sound Downloader
+ Seismic Sound Downloader
